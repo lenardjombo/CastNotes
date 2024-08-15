@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CastNotes</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Linking to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Lato&family=Montserrat&family=Raleway&family=Ubuntu&family=Nunito&family=Merriweather&family=Poppins&family=Rubik&family=Cabin&family=Heebo&family=Fira+Sans&family=PT+Sans&family=Barlow&family=Oswald&family=Quicksand&family=Inconsolata&family=Karla&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="toolbar">
+        <button onclick="formatText('bold')"><b>B</b></button>
+        <button onclick="formatText('italic')"><i>I</i></button>
+        <button onclick="formatText('underline')"><u>U</u></button>
+        <button onclick="formatText('strikethrough')"><s>S</s></button>
+        <button onclick="formatText('subscript')">Sub</button>
+        <button onclick="formatText('superscript')">Sup</button>
+        <select onchange="formatText('fontName', this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Open Sans">Open Sans</option>
+            <option value="Lato">Lato</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Raleway">Raleway</option>
+            <option value="Ubuntu">Ubuntu</option>
+            <option value="Nunito">Nunito</option>
+            <option value="Merriweather">Merriweather</option>
+            <option value="Poppins">Poppins</option>
+            <option value="Rubik">Rubik</option>
+            <option value="Cabin">Cabin</option>
+            <option value="Heebo">Heebo</option>
+            <option value="Fira Sans">Fira Sans</option>
+            <option value="PT Sans">PT Sans</option>
+            <option value="Barlow">Barlow</option>
+            <option value="Oswald">Oswald</option>
+            <option value="Quicksand">Quicksand</option>
+            <option value="Inconsolata">Inconsolata</option>
+            <option value="Karla">Karla</option>
+            <option value="Playfair Display">Playfair Display</option>
+        </select>
+        <select onchange="formatText('fontSize', this.value)">
+            <option value="1">8pt</option>
+            <option value="2">10pt</option>
+            <option value="3">12pt</option>
+            <option value="4">14pt</option>
+            <option value="5">18pt</option>
+            <option value="6">24pt</option>
+            <option value="7">36pt</option>
+        </select>
+        <input type="color" onchange="formatText('foreColor', this.value)">
+        <button onclick="formatText('justifyLeft')">Left</button>
+        <button onclick="formatText('justifyCenter')">Center</button>
+        <button onclick="formatText('justifyRight')">Right</button>
+        <button onclick="formatText('justifyFull')">Justify</button>
+        <button onclick="formatText('insertOrderedList')">OL</button>
+        <button onclick="formatText('insertUnorderedList')">UL</button>
+        <button onclick="formatText('indent')">Indent</button>
+        <button onclick="formatText('outdent')">Outdent</button>
+        <button onclick="formatText('undo')">Undo</button>
+        <button onclick="formatText('redo')">Redo</button>
+        <button onclick="saveDocument()">Save as PDF</button>
+    </div>
+    <div id="editor" contenteditable="true"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
